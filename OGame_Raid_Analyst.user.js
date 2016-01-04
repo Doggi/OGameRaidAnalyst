@@ -2,7 +2,7 @@
 // @name        OGame Raid Analyst
 // @namespace   ogame
 // @include     http://*.ogame.gameforge.com/game/index.php?page=overview*
-// @version     1.02
+// @version     1.03
 // @updateURL   https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @downloadURL https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @grant       none
@@ -141,7 +141,7 @@ var flightsStorageName = "ogame_raid_analyst_flights";
                 "<tr><td>Deuterium:</td><td align='right'> " + output.deuterium.format() +  "</td></tr>" +
                 "<tr style='border-top: solid;'><td>Gesamt:</td><td align='right'> " + output.total.format() +  "</td></tr>" +
                 "<tr><td>Flüge:</td><td align='right'> " + output.flights +  "</td></tr>" +
-                "<tr><td>durchschn. Beute:</td><td align='right'> " + averagePrey.format() +  "</td></tr>" +
+                "<tr><td>durchschn. Beute:</td><td align='right'> " + averagePrey.format(0) +  "</td></tr>" +
             "</table>" +
         "</div>");
 
