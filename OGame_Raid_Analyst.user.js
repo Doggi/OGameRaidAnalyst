@@ -2,7 +2,7 @@
 // @name        OGame Raid Analyst
 // @namespace   ogame
 // @include     http://*.ogame.gameforge.com/game/index.php?page=overview*
-// @version     1
+// @version     1.01
 // @updateURL   https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @downloadURL https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @grant       none
@@ -106,11 +106,12 @@ var flightsStorageName = "ogame_raid_analyst_flights";
 
 
 
-    var ress = {
+    var output = {
         total: 0,
         metal: 0,
         crystal: 0,
-        deuterium: 0
+        deuterium: 0,
+        flights: 0
     };
 
     $.each(flights, function(){
@@ -118,23 +119,30 @@ var flightsStorageName = "ogame_raid_analyst_flights";
         console.log("do");
         console.log(d, today, tomorrow);
         if( d >= today && d < tomorrow ) {
-            ress.total += this.ressources;
-            ress.metal += this.metal;
-            ress.crystal += this.crystal;
-            ress.deuterium += this.deuterium;
+            output.total += this.ressources;
+            output.metal += this.metal;
+            output.crystal += this.crystal;
+            output.deuterium += this.deuterium;
+            output.flights ++;
         }
     });
 
+    var averagePrey = 0;
+
+    if( output.flights > 0 ){
+        averagePrey = output.total / output.flights;
+    }
 
     var result = $("#toolLinksWrapper").append(
         "<div id='ora_result'>" +
             "<table width='100%'>" +
-            "<tr><td>Gesamt:</td><td align='right'> " + ress.total.format() +  "</td>" +
-        "<tr><td>Metall:</td><td align='right'> " + ress.metal.format() +  "</td>" +
-        "<tr><td>Kristall:</td><td align='right'> " + ress.crystal.format() +  "</td>" +
-        "<tr><td>Deuterium:</td><td align='right'> " + ress.deuterium.format() +  "</td>" +
-        "</tr>" +
-        "</table>" +
+                "<tr><td>Metall:</td><td align='right'> " + output.metal.format() +  "</td></tr>" +
+                "<tr><td>Kristall:</td><td align='right'> " + output.crystal.format() +  "</td></tr>" +
+                "<tr><td>Deuterium:</td><td align='right'> " + output.deuterium.format() +  "</td></tr>" +
+                "<tr style='border-top: solid;'><td>Gesamt:</td><td align='right'> " + output.total.format() +  "</td></tr>" +
+                "<tr><td>Flüge:</td><td align='right'> " + output.flights +  "</td></tr>" +
+                "<tr><td>durchschn. Beute:</td><td align='right'> " + averagePrey +  "</td></tr>" +
+            "</table>" +
         "</div>");
 
 
