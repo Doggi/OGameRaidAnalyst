@@ -2,7 +2,7 @@
 // @name        OGame Raid Analyst
 // @namespace   ogame
 // @include     http://*.ogame.gameforge.com/game/index.php?page=overview*
-// @version     1.06
+// @version     1.07
 // @updateURL   https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @downloadURL https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @grant       none
@@ -62,7 +62,7 @@ var flightsStorageName = "ogame_raid_analyst_flights";
     $("<link/>", {
         rel: "stylesheet",
         type: "text/css",
-        href: "https://github.com/Doggi/OGameRaidAnalyst/raw/master/ora.css"
+        href: "https://raw.githubusercontent.com/Doggi/OGameRaidAnalyst/master/ora.css"
     }).appendTo("head");
 
 
