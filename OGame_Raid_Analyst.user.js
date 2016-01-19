@@ -2,7 +2,7 @@
 // @name        OGame Raid Analyst
 // @namespace   ogame
 // @include     http://*.ogame.gameforge.com/game/index.php?page=overview*
-// @version     1.07
+// @version     1.08
 // @updateURL   https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @downloadURL https://github.com/Doggi/OGameRaidAnalyst/raw/master/OGame_Raid_Analyst.user.js
 // @grant       none
@@ -146,7 +146,7 @@ var flightsStorageName = "ogame_raid_analyst_flights";
                 "<tr><td>Metall:</td><td align='right'> " + output.metal.format() +  "</td></tr>" +
                 "<tr><td>Kristall:</td><td align='right'> " + output.crystal.format() +  "</td></tr>" +
                 "<tr><td>Deuterium:</td><td align='right'> " + output.deuterium.format() +  "</td></tr>" +
-                "<tr style='border-top: solid white;'><td>Gesamt:</td><td align='right'> " + output.total.format() +  "</td></tr>" +
+                "<tr><td style='border-top: solid white 1px;'>Gesamt:</td><td align='right' style='border-top: solid white 1px;'> " + output.total.format() +  "</td></tr>" +
                 "<tr><td>&nbsp;</td><td>&nbsp;</td></tr>" +
                 "<tr><td>&#216; / Flüge:</td><td align='right'>" + averagePrey.format(0) + " / " + output.flights + "</td></tr>" +
             "</table>" +
