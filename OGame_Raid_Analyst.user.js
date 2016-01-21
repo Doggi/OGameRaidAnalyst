@@ -142,14 +142,14 @@ var flightsStorageName = "ogame_raid_analyst_flights";
 
     var result = $("#toolLinksWrapper").append(
         "<div id='ora_box'>" +
-            "<table width='100%'>" +
-                "<tr><td>Metall:</td><td align='right'> " + output.metal.format() +  "</td></tr>" +
-                "<tr><td>Kristall:</td><td align='right'> " + output.crystal.format() +  "</td></tr>" +
-                "<tr><td>Deuterium:</td><td align='right'> " + output.deuterium.format() +  "</td></tr>" +
-                "<tr><td style='border-top: solid white 1px;'>Gesamt:</td><td align='right' style='border-top: solid white 1px;'> " + output.total.format() +  "</td></tr>" +
-                "<tr><td>&nbsp;</td><td>&nbsp;</td></tr>" +
-                "<tr><td>&#216; / Flüge:</td><td align='right'>" + averagePrey.format(0) + " / " + output.flights + "</td></tr>" +
-            "</table>" +
+        "<table width='100%'>" +
+        "<tr><td>Metall:</td><td align='right'> " + output.metal.format() +  "</td></tr>" +
+        "<tr><td>Kristall:</td><td align='right'> " + output.crystal.format() +  "</td></tr>" +
+        "<tr><td>Deuterium:</td><td align='right'> " + output.deuterium.format() +  "</td></tr>" +
+        "<tr><td style='border-top: solid white 1px;'>Gesamt:</td><td align='right' style='border-top: solid white 1px;'> " + output.total.format() +  "</td></tr>" +
+        "<tr><td>&nbsp;</td><td>&nbsp;</td></tr>" +
+        "<tr><td>&#216; / Flüge:</td><td align='right'>" + averagePrey.format(0) + " / " + output.flights + "</td></tr>" +
+        "</table>" +
         "</div>");
 
 
